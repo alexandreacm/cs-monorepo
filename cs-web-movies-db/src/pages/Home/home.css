@@ -3,20 +3,20 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: #f3f3f3;
 }
 
 .movie-list {
-    max-width: 800px;
+    max-width: 100%;
     margin: 14px auto;
 }
 
 .movie-list article {
-    width: 100%;
-    padding: 15px;
+    width: 350px;
+    padding: 20px;
     border-radius: 4px;
-    background-color: #f3f3f3;
     margin-bottom: 10px;
+    background-color: #FFF;
+    margin-top: 10px;
 }
 
 .movie-list strong {
@@ -27,7 +27,8 @@
 }
 
 .movie-list img{
-    max-width: 400px;
+    width: 100%;
+    height: 100%;
     display: block;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -54,3 +55,37 @@
     align-items: center;
     justify-content: center;
 }
+
+input[type=search] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #CDCDCD;
+    border-radius: 6px;
+  }
+
+  .button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .no-movies {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .no-movies label{
+   font-size: 20px;
+   font-weight: normal;
+  }

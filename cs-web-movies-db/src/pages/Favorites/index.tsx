@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 import "./favorites.css";
 import { toast } from "react-toastify";
+import { IMovie } from "../../models/imdb-movie.model";
 
 function Favorites() {
-  const [movies, setMovies] = useState<Array<Movies>>([]);
+  const [movies, setMovies] = useState<Array<IMovie>>([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,13 +23,13 @@ function Favorites() {
     loadingLocalMovies();
   }, []);
 
-  function onNavigate(movieId: number) {
+  function onNavigate(movieId: string) {
     navigate(`/detail-movie/${movieId}`);
   }
 
-  function onDeleteMovie(movieId: number) {
+  function onDeleteMovie(movieId: string) {
     const filteredMovies = movies.filter(
-      (movie: Movies) => movie.id !== movieId
+      (movie: IMovie) => movie.imdbID !== movieId
     );
 
     setMovies(filteredMovies);
@@ -50,18 +51,18 @@ function Favorites() {
           <div className="favorite-list">
             {movies.map((movie) => {
               return (
-                <article key={movie?.id}>
+                <article key={movie?.imdbID}>
                   {/* <strong>{movie?.title}</strong> */}
-                  <img src={`${image_base_path}/${movie.poster_path}`} alt="" />
+                  <img src={`${movie.Poster}`} alt="" />
                   <div className="div-buttons">
                     <button
                       className="detail"
-                      onClick={() => onNavigate(movie?.id)}
+                      onClick={() => onNavigate(movie?.imdbID)}
                     >
                       Detail Movie
                     </button>
                     <button
-                      onClick={() => onDeleteMovie(movie?.id)}
+                      onClick={() => onDeleteMovie(movie?.imdbID)}
                       className="delete"
                     >
                       Delete Movie
