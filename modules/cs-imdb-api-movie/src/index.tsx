@@ -5,7 +5,7 @@ export function multiply(a: number, b: number): Promise<number> {
   return Promise.resolve(a + b);
 }
 
-export function getMovies(
+export function fetchMovies(
   title: string,
   page?: number
 ): Promise<AxiosResponse> {

@@ -12,24 +12,28 @@ npm install react-native-cs-imdb-api-movie
 
 ```sh
 Just copy the entire folder modules to your root project.
-putting "react-native-cs-imdb-api-movie": "link:./modules/cs-imdb-api-movie" on package.json dependencies
+You need to put on package.json
+
+ "dependencies": {
+    "react-native-cs-imdb-api-movie": "link:./modules/cs-imdb-api-movie"
+  }
 execute yarn / npm
 ```
 
 ## Usage
 
 ```js
-import { getMovies } from "react-native-cs-imdb-api-movie";
+import { fetchMovies } from "react-native-cs-imdb-api-movie";
 
 // ...
 
 React.useEffect(() => {
-  async function loadMovies() {
-    const response = await getMovies("hidden");
+  async function getMovies() {
+    const response = await fetchMovies("hidden");
     console.log(response.data.Search);
   }
 
-  loadMovies();
+  getMovies();
 }, []);
 ```
 
