@@ -17,8 +17,8 @@ Just copy the entire folder modules to your root project.
 
 MyApp
 ├── node_modules
-├── modules              <-- folder for your local libraries
-│   └── awesome-library  <-- your local library
+├── modules                <-- folder for your local libraries
+│   └── cs-imdb-api-movie  <-- your local library
 ├── android
 ├── ios
 ├── src
