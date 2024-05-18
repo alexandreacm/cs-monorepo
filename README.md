@@ -1,21 +1,36 @@
 # react-native-cs-imdb-api-movie
 
-fetch data from IMDb
+This is an example of a library to fetch data from Open API Movie Database.
 
-## Installation
+## Installation when published on npm
 
 ```sh
 npm install react-native-cs-imdb-api-movie
 ```
 
+## Locally installation
+
+```sh
+Just copy the entire folder modules to your root project.
+putting "react-native-cs-imdb-api-movie": "link:./modules/cs-imdb-api-movie" on package.json dependencies
+execute yarn / npm
+```
+
 ## Usage
 
 ```js
-import { multiply } from 'react-native-cs-imdb-api-movie';
+import { getMovies } from "react-native-cs-imdb-api-movie";
 
 // ...
 
-const result = await multiply(3, 7);
+React.useEffect(() => {
+  async function loadMovies() {
+    const response = await getMovies("hidden");
+    console.log(response.data.Search);
+  }
+
+  loadMovies();
+}, []);
 ```
 
 ## Contributing
