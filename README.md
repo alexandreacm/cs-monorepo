@@ -2,16 +2,29 @@
 
 This is an example of a library to fetch data from Open API Movie Database.
 
-## Installation when published on npm
+## Installation on https://www.npmjs.com/
+
+Obs: not published
 
 ```sh
 npm install react-native-cs-imdb-api-movie
 ```
 
-## Locally installation
+## Local library installation
 
 ```sh
 Just copy the entire folder modules to your root project.
+
+MyApp
+├── node_modules
+├── modules              <-- folder for your local libraries
+│   └── awesome-library  <-- your local library
+├── android
+├── ios
+├── src
+├── index.js
+└── package.json
+
 You need to put on package.json
 
  "dependencies": {
