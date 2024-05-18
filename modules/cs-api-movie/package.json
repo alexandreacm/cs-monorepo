@@ -1,9 +1,0 @@
-{
-  "name": "rn-cs-api-movie",
-  "version": "0.0.0",
-  "description": "fetch data from imdb api",
-  "main": "src/index",
-  "author": " <> ()",
-  "license": "UNLICENSED",
-  "homepage": "#readme"
-}
